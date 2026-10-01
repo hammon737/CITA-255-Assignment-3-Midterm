@@ -6,7 +6,7 @@
     <VerticalStackLayout>
         <Grid RowDefinitions ="Auto,Auto,Auto"
               Padding="20"
-              RowSpacing="175"
+              RowSpacing="177"
             ColumnDefinitions ="*,100">
             <Label 
                 Grid.Row="0" Grid.ColumnSpan="3"
