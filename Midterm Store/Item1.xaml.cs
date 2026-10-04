@@ -6,8 +6,28 @@ public partial class NewPage1 : ContentPage
 	{
 		InitializeComponent();
 	}
-    private async void OnBackClicked(object sender, EventArgs e)
+    void Ordered(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("..");
+        try
+        {
+            int orderNum = int.Parse(orderEntry.Text);
+            resultLabel.Text = $"Added +{orderNum} Item 1 to your cart.";
+        }
+        catch (ArgumentOutOfRangeException)
+        {
+            DisplayAlertAsync("This is way too many!", "Please enter a number between 1 and 99.", "Ok");
+        }
+        catch (System.FormatException)
+        {
+            DisplayAlertAsync("This is not a number", "Please enter a number between 1 and 99.", "Ok");
+        }
+        catch (OverflowException)
+        {
+            DisplayAlertAsync("This is way too long!", "Please enter a number between 1 and 99.", "Ok");
+        }
+        catch (ArgumentNullException)
+        {
+            DisplayAlertAsync("Where'd you go?", "There's nothing here.", "Ok");
+        }
     }
 }
