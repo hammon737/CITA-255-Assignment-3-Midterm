@@ -4,14 +4,47 @@
              x:Class="Midterm_Store.NewPage2"
              Title="Item 2">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to Item 2"
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+          ColumnDefinitions="*"
+          Margin="10">
+            <Label Grid.Row="1" Grid.ColumnSpan="3"
+            Text="Item 2"
+            FontSize="20"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Button
-            x:Name="SecondBack"
-            Text="Click here to go back" 
-            Clicked="OnBackClicked"
+            HorizontalOptions="Start" />
+            <Label Grid.Row="2" Grid.ColumnSpan="3"
+            Text="$3.99"
+            TextColor="IndianRed"
+            FontSize="18"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" />
+            <Label Grid.Row="3" Grid.ColumnSpan="3"
+            Text="This is item 2"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" />
+            <Label Grid.Row="4" Grid.ColumnSpan="3"
+            Text="In Stock"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" />
+            <Label Grid.Row="5" Grid.ColumnSpan="3"
+            Text="Quantity"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" />
+            <Entry Grid.Row="6"
+           x:Name="orderEntry"
+           Text=""
+           Placeholder="How many?"
+           Keyboard="Numeric"
+           FontSize="18" />
+            <Button Grid.Row="8"
+            x:Name="FirstBack"
+            Text="Add to Cart" 
+            Clicked="Ordered"
             HorizontalOptions="Fill" />
+            <Label Grid.Row="9"
+            Text="No Number Collected Yet" 
+            HorizontalTextAlignment="Start" 
+            x:Name="resultLabel"/>
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>

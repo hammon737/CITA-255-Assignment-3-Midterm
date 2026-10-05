@@ -4,21 +4,47 @@
              x:Class="Midterm_Store.NewPage5"
              Title="Checkout">
     <VerticalStackLayout>
-        <Grid RowDefinitions ="Auto,Auto,Auto"
+        <Grid RowDefinitions ="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
               Padding="20"
-              RowSpacing="177"
-            ColumnDefinitions ="*,100">
+              RowSpacing="10">
             <Label 
                 Grid.Row="0" Grid.ColumnSpan="3"
-                Text="Welcome to checkout"
+                Text="Your Basket:"
+                FontSize="20"
                 VerticalOptions="Center" 
-                HorizontalOptions="Center" />
-            <Button
-                Grid.Row="2" Grid.ColumnSpan="3"
-                x:Name="Check"
-                Text="Click here to check out" 
-                HorizontalOptions="Fill" 
-                VerticalOptions="End"/>
+                HorizontalOptions="Start" />
+            <Label 
+                Grid.Row="1" Grid.ColumnSpan="3"
+                Text="Nothing in here yet."
+                FontSize="10"
+                TextColor="Grey"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" />
+            <Label
+                Grid.Row="2"/>
+            <Label
+                Grid.Row="3"/>
+            <Label
+                Grid.Row="4"/>
+            <Label
+                Grid.Row="5"/>
+            <Label
+                Grid.Row="6"/>
+            <Label
+                Grid.Row="7"/>
+
         </Grid>
+        <Label 
+             Text="Total: $0.00"
+             FontSize="15"
+             VerticalOptions="End" 
+             HorizontalOptions="End" 
+             Margin="20"/>
+         <Button
+             x:Name="Check"
+             Text="Click here to check out" 
+             HorizontalOptions="Fill" 
+             VerticalOptions="End"
+             Margin="20"/>
     </VerticalStackLayout>
 </ContentPage>

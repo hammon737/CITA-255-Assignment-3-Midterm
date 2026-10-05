@@ -8,26 +8,21 @@ public partial class NewPage1 : ContentPage
 	}
     void Ordered(object sender, EventArgs e)
     {
-        try
+
+        if (double.TryParse(orderEntry.Text, out double outNumber))
         {
-            int orderNum = int.Parse(orderEntry.Text);
-            resultLabel.Text = $"Added +{orderNum} Item 1 to your cart.";
+            if (outNumber > 0 && outNumber < 99)
+            {
+                resultLabel.Text = $"Added {outNumber}x Item 1 to your cart.";
+            }
+            else
+            {
+                DisplayAlertAsync("Hang on", "That number can't be ordered. Try again with a number between 1 and 99.", "Ok");
+            }
         }
-        catch (ArgumentOutOfRangeException)
+        else
         {
-            DisplayAlertAsync("This is way too many!", "Please enter a number between 1 and 99.", "Ok");
-        }
-        catch (System.FormatException)
-        {
-            DisplayAlertAsync("This is not a number", "Please enter a number between 1 and 99.", "Ok");
-        }
-        catch (OverflowException)
-        {
-            DisplayAlertAsync("This is way too long!", "Please enter a number between 1 and 99.", "Ok");
-        }
-        catch (ArgumentNullException)
-        {
-            DisplayAlertAsync("Where'd you go?", "There's nothing here.", "Ok");
+            DisplayAlertAsync("Hang on", "Please enter a valid number", "Ok");
         }
     }
 }
