@@ -16,7 +16,7 @@
             <Label 
                 Grid.Row="1" Grid.ColumnSpan="3"
                 Text="Nothing in here yet."
-                FontSize="10"
+                FontSize="15"
                 TextColor="Grey"
                 VerticalOptions="Center" 
                 HorizontalOptions="Start" />
@@ -37,9 +37,10 @@
         <Label 
              Text="Total: $0.00"
              FontSize="15"
+             Margin="30"
+             FontAttributes="Italic"
              VerticalOptions="End" 
-             HorizontalOptions="End" 
-             Margin="20"/>
+             HorizontalOptions="End"/>
          <Button
              x:Name="Check"
              Text="Click here to check out" 

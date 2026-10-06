@@ -7,10 +7,12 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Label
+            <Label x:Name="Title"
                 Text="Welcome to the store!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+                FontSize="30"
+                HorizontalTextAlignment="Center"
+                Padding="30"
+                FontAttributes="Bold"/>
             <CollectionView x:Name="productList" 
                 SelectionMode="Single"
                 SelectionChanged="OnProductSelected">

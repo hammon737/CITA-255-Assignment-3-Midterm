@@ -23,6 +23,9 @@ namespace Midterm_Store
             if (e.CurrentSelection.Count > 0)
             {
                 string picked = e.CurrentSelection[0].ToString();
+
+                productList.SelectedItem = null;
+
                 if (picked == "Item 1")
                 {
                     await Shell.Current.GoToAsync("GoTo1");
