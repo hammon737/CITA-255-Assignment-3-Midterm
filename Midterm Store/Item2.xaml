@@ -48,7 +48,7 @@
                 HorizontalOptions="Fill" 
                 IsEnabled="False"/>
             <Label Grid.Row="9"
-                Text="No Number Collected Yet" 
+                Text="Cannot purchase at this time." 
                 HorizontalTextAlignment="Start" 
                 x:Name="resultLabel"/>
         </Grid>
