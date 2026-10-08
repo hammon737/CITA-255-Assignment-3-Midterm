@@ -42,8 +42,11 @@
             <Button Grid.Row="8"
                 x:Name="FirstBack"
                 Text="Add to Cart" 
+                BackgroundColor="Gray"
+                TextColor="Black"
                 Clicked="Ordered"
-                HorizontalOptions="Fill" />
+                HorizontalOptions="Fill" 
+                IsEnabled="False"/>
             <Label Grid.Row="9"
                 Text="No Number Collected Yet" 
                 HorizontalTextAlignment="Start" 
