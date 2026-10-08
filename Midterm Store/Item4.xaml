@@ -2,49 +2,56 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Midterm_Store.NewPage4"
-             Title="Item 4">
-    <VerticalStackLayout>
+             Title="Sense Enhancement">
+    <ScrollView>
         <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
           ColumnDefinitions="*"
+          RowSpacing="5"
           Margin="10">
+            <Image Source="senseenhancementpotion.png" Grid.Row="0" HeightRequest="160"/>
             <Label Grid.Row="1" Grid.ColumnSpan="3"
-            Text="Item 4"
-            FontSize="20"
-            VerticalOptions="Center" 
-            HorizontalOptions="Start" />
+                Text="Sensory Enhancement Potion"
+                FontSize="20"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" />
             <Label Grid.Row="2" Grid.ColumnSpan="3"
-            Text="$4.45"
-            TextColor="IndianRed"
-            FontSize="18"
-            VerticalOptions="Center" 
-            HorizontalOptions="Start" />
+                Text="$12.45"
+                TextColor="IndianRed"
+                FontSize="18"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" />
             <Label Grid.Row="3" Grid.ColumnSpan="3"
-            Text="This is item 4"
-            VerticalOptions="Center" 
-            HorizontalOptions="Start" />
+                Text="This potion increases the user's senses. Users can hear a pin drop from a mile away."
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" />
             <Label Grid.Row="4" Grid.ColumnSpan="3"
-            Text="In Stock"
-            VerticalOptions="Center" 
-            HorizontalOptions="Start" />
+                Text="Side effects may include: visual and auditory hallucinations, mild vertigo, eye strain, waves of nausea, possible death, and minor headaches."
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" />
             <Label Grid.Row="5" Grid.ColumnSpan="3"
-            Text="Quantity"
-            VerticalOptions="Center" 
-            HorizontalOptions="Start" />
-            <Entry Grid.Row="6"
-            x:Name="orderEntry"
-            Text=""
-            Placeholder="How many?"
-            Keyboard="Numeric"
-            FontSize="18" />
+                Text="In Stock"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" 
+                TextColor="DarkSeaGreen"/>
+            <Label Grid.Row="6" Grid.ColumnSpan="3"
+                Text="Quantity"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" />
+            <Entry Grid.Row="7"
+                x:Name="orderEntry"
+                Text=""
+                Placeholder="How many?"
+                Keyboard="Numeric"
+                FontSize="18" />
             <Button Grid.Row="8"
-            x:Name="FirstBack"
-            Text="Add to Cart" 
-            Clicked="Ordered"
-            HorizontalOptions="Fill" />
+                x:Name="FirstBack"
+                Text="Add to Cart" 
+                Clicked="Ordered"
+                HorizontalOptions="Fill" />
             <Label Grid.Row="9"
-            Text="No Number Collected Yet" 
-            HorizontalTextAlignment="Start" 
-            x:Name="resultLabel"/>
+                Text="No Number Collected Yet" 
+                HorizontalTextAlignment="Start" 
+                x:Name="resultLabel"/>
         </Grid>
-    </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

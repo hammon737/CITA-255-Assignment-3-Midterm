@@ -12,10 +12,10 @@ namespace Midterm_Store
 
         List<string> products =
         [
-            "Item 1",
-            "Item 2",
-            "Item 3",
-            "Item 4"
+            "Health Potion",
+            "Love Potion",
+            "Gravity Potion",
+            "Sensory Enhancement Potion"
         ];
 
         private async void OnProductSelected(object sender, SelectionChangedEventArgs e)
@@ -26,19 +26,19 @@ namespace Midterm_Store
 
                 productList.SelectedItem = null;
 
-                if (picked == "Item 1")
+                if (picked == "Health Potion")
                 {
                     await Shell.Current.GoToAsync("GoTo1");
                 }
-                if (picked == "Item 2")
+                if (picked == "Love Potion")
                 {
                     await Shell.Current.GoToAsync("GoTo2");
                 }
-                if (picked == "Item 3")
+                if (picked == "Gravity Potion")
                 {
                     await Shell.Current.GoToAsync("GoTo3");
                 }
-                if (picked == "Item 4")
+                if (picked == "Sensory Enhancement Potion")
                 {
                     await Shell.Current.GoToAsync("GoTo4");
                 }

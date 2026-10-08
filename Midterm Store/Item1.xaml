@@ -2,38 +2,45 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Midterm_Store.NewPage1"
-             Title="Item 1">
+             Title="Health Potion">
 
     
 
-    <VerticalStackLayout>
+    <ScrollView>
         <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
               ColumnDefinitions="*"
+              RowSpacing="5"
               Margin="10">
+            <Image Source="healthpotion.png" Grid.Row="0" HeightRequest="160"/>
             <Label Grid.Row="1" Grid.ColumnSpan="3"
-                Text="Item 1"
+                Text="Health Potion"
                 FontSize="20"
                 VerticalOptions="Center" 
                 HorizontalOptions="Start" />
             <Label Grid.Row="2" Grid.ColumnSpan="3"
-                Text="$2.25"
+                Text="$15.25"
                 TextColor="IndianRed"
                 FontSize="18"
                 VerticalOptions="Center" 
                 HorizontalOptions="Start" />
             <Label Grid.Row="3" Grid.ColumnSpan="3"
-                Text="This is item 1"
+                Text="This potion will heal any physical injuries."
                 VerticalOptions="Center" 
                 HorizontalOptions="Start" />
             <Label Grid.Row="4" Grid.ColumnSpan="3"
-                Text="In Stock"
+                Text="Warning: Do not attempt to use this potion to cure mental illness. It will not work."
                 VerticalOptions="Center" 
                 HorizontalOptions="Start" />
             <Label Grid.Row="5" Grid.ColumnSpan="3"
+                Text="In Stock"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" 
+                TextColor="DarkSeaGreen"/>
+            <Label Grid.Row="6" Grid.ColumnSpan="3"
                 Text="Quantity"
                 VerticalOptions="Center" 
                 HorizontalOptions="Start" />
-            <Entry Grid.Row="6"
+            <Entry Grid.Row="7"
                x:Name="orderEntry"
                Text=""
                Placeholder="How many?"
@@ -49,5 +56,5 @@
                 HorizontalTextAlignment="Start" 
                 x:Name="resultLabel"/>
         </Grid>
-    </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

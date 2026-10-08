@@ -5,20 +5,22 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+            Padding="20,0">
             <Label x:Name="Title"
-                Text="Welcome to the store!"
+                Text="Buy our potions!"
                 FontSize="30"
-                HorizontalTextAlignment="Center"
-                Padding="30"
+                HorizontalTextAlignment="Start"
+                Padding="10"
                 FontAttributes="Bold"/>
             <CollectionView x:Name="productList" 
                 SelectionMode="Single"
                 SelectionChanged="OnProductSelected">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Label Text="{Binding .}" FontSize="20" HorizontalTextAlignment="Center" />
+                        <Label Text="{Binding .}" 
+                               Padding="10"
+                               FontSize="20" 
+                               HorizontalTextAlignment="Start" />
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
