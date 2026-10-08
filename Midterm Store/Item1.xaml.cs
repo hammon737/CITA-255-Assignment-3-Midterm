@@ -16,7 +16,7 @@ public partial class NewPage1 : ContentPage
             if (outNumber > 0 && outNumber < 99)
             {
                 resultLabel.TextColor = Colors.MediumSeaGreen;
-                resultLabel.Text = $"Added {outNumber}x Item 1 to your cart.";
+                resultLabel.Text = $"Added {outNumber}x Health Potion to your cart.";
             }
             else
             {
