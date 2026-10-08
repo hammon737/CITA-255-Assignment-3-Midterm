@@ -1,3 +1,4 @@
+# Midterm Store
 CITA255_Assignment1
 Assignment 3- Midterm Store
 
