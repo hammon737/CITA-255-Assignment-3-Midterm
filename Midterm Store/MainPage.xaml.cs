@@ -18,6 +18,8 @@ namespace Midterm_Store
             "Sensory Enhancement Potion"
         ];
 
+        
+
         private async void OnProductSelected(object sender, SelectionChangedEventArgs e)
         {
             if (e.CurrentSelection.Count > 0)
