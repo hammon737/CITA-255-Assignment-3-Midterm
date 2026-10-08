@@ -6,13 +6,13 @@
     <ScrollView>
         <VerticalStackLayout
             Padding="20,0">
-            <Label x:Name="Title"
+            <Label 
                 Text="Welcome to Potionsellers Inc."
                 FontSize="30"
                 HorizontalTextAlignment="Center"
                 Padding="10"
                 FontAttributes="Bold"/>
-            <Label x:Name="Title"
+            <Label 
                 Text="Buy our potions!"
                 FontSize="30"
                 HorizontalTextAlignment="Start"
