@@ -7,6 +7,12 @@
         <VerticalStackLayout
             Padding="20,0">
             <Label x:Name="Title"
+                Text="Welcome to Potionsellers Inc."
+                FontSize="30"
+                HorizontalTextAlignment="Center"
+                Padding="10"
+                FontAttributes="Bold"/>
+            <Label x:Name="Title"
                 Text="Buy our potions!"
                 FontSize="30"
                 HorizontalTextAlignment="Start"
