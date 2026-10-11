@@ -18,7 +18,13 @@ namespace Midterm_Store
             "Sensory Enhancement Potion"
         ];
 
-        
+        List<double> prices =
+        [
+            15.25,
+            25.99,
+            13.99,
+            12.45
+        ];
 
         private async void OnProductSelected(object sender, SelectionChangedEventArgs e)
         {
