@@ -7,6 +7,7 @@ namespace Midterm_Store
     public static class Cart
     {
         public static List<string> Names = new List<string>();
+        public static List<double> Quantity = new List<double>();
         public static List<double> Price = new List<double>();
     }
 }
