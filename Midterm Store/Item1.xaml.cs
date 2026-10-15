@@ -1,4 +1,5 @@
 using Microsoft.Maui.Graphics.Text;
+using System.Diagnostics;
 
 namespace Midterm_Store;
 
@@ -7,12 +8,15 @@ public partial class NewPage1 : ContentPage
 	public NewPage1()
 	{
 		InitializeComponent();
+
 	}
     void Ordered(object sender, EventArgs e)
     {
+        
 
         if (double.TryParse(orderEntry.Text, out double outNumber))
         {
+            
             if (outNumber > 0 && outNumber < 99)
             {
                 resultLabel.TextColor = Colors.MediumSeaGreen;

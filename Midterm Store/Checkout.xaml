@@ -4,60 +4,61 @@
              x:Class="Midterm_Store.NewPage5"
              Title="Checkout">
     <VerticalStackLayout>
-        <Grid RowDefinitions ="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
-              Padding="20"
-              RowSpacing="10">
+        <Grid RowDefinitions ="Auto,*,Auto,Auto"
+              Padding="40"
+              RowSpacing="16">
             <Label 
                 Grid.Row="0" Grid.ColumnSpan="3"
                 Text="Your Basket:"
                 FontSize="20"
+                FontAttributes="Bold"
                 VerticalOptions="Center" 
                 HorizontalOptions="Start" />
-            <CollectionView x:Name="CartView" Grid.Row="1">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Label Text="{Binding .}"
-                               FontSize="15"
-                               Padding="12,10" />
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
+            <Border Grid.Row="1"
+                    StrokeThickness="1"
+                    Padding="4">
+                    <CollectionView x:Name="CartView">
+                        
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Label Text="{Binding .}"
+                                       FontSize="15"
+                                       Padding="12,10" />
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
 
-                <CollectionView.EmptyView>
-                    <Label 
-                        Grid.Row="1" Grid.ColumnSpan="3"
-                        Text="Nothing in here yet."
-                        FontSize="15"
-                        TextColor="Grey"
-                        VerticalOptions="Center" 
-                        HorizontalOptions="Start" />
-                </CollectionView.EmptyView>
-            </CollectionView>
+                        <CollectionView.EmptyView>
+                            <Label 
+                                Grid.Row="1" Grid.ColumnSpan="3"
+                                Text="Nothing in here yet."
+                                FontSize="15"
+                                TextColor="Grey"
+                                VerticalOptions="Center" 
+                                HorizontalOptions="Start" />
+                        </CollectionView.EmptyView>
+                    </CollectionView>
+            </Border>
+            
             <Label
-                Grid.Row="2"/>
-            <Label
-                Grid.Row="3"/>
-            <Label
-                Grid.Row="4"/>
-            <Label
-                Grid.Row="5"/>
-            <Label
-                Grid.Row="6"/>
-            <Label
-                Grid.Row="7"/>
+                 Grid.Row="2"
+                 x:Name="totalLabel"
+                 Text="$0.00"
+                 FontSize="15"
+                 FontAttributes="Italic"
+                 VerticalOptions="End" 
+                 HorizontalOptions="End"/>
+            <Button
+                Grid.Row="3"
+                x:Name="Check"
+                Text="Check Out" 
+                HorizontalOptions="Fill" 
+                VerticalOptions="End"
+                Margin="20"
+                Clicked="checkingOut"/>
+            
 
         </Grid>
-        <Label x:Name="total"
-             Text="Total: $0.00"
-             FontSize="15"
-             Margin="30"
-             FontAttributes="Italic"
-             VerticalOptions="End" 
-             HorizontalOptions="End"/>
-         <Button
-             x:Name="Check"
-             Text="Click here to check out" 
-             HorizontalOptions="Fill" 
-             VerticalOptions="End"
-             Margin="20"/>
+        
+             
     </VerticalStackLayout>
 </ContentPage>
