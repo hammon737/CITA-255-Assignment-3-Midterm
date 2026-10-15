@@ -15,6 +15,9 @@ public partial class NewPage4 : ContentPage
             {
                 resultLabel.TextColor = Colors.MediumSeaGreen;
                 resultLabel.Text = $"Added {outNumber}x Sensory Enhancement Potion to your cart.";
+                Cart.Names.Add("Sensory Enhancement Potion");
+                Cart.Quantity.Add(outNumber);
+                Cart.Price.Add(12.45);
             }
             else
             {

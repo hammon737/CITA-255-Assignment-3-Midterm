@@ -15,6 +15,9 @@ public partial class NewPage2 : ContentPage
             {
                 resultLabel.TextColor = Colors.MediumSeaGreen;
                 resultLabel.Text = $"Added {outNumber}x Love Potion to your cart.";
+                Cart.Names.Add("Love Potion");
+                Cart.Quantity.Add(outNumber);
+                Cart.Price.Add(25.99);
             }
             else
             {
