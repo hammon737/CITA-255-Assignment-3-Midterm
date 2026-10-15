@@ -28,7 +28,7 @@
                         </CollectionView.ItemTemplate>
 
                         <CollectionView.EmptyView>
-                            <Label 
+                            <Label x:Name="empty"
                                 Grid.Row="1" Grid.ColumnSpan="3"
                                 Text="Nothing in here yet."
                                 FontSize="15"

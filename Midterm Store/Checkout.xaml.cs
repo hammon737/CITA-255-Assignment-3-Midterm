@@ -36,9 +36,9 @@ public partial class NewPage5 : ContentPage
             total += totalPrice;
         }
 
-        CartView.ItemsSource = null;
+        
         CartView.ItemsSource = lines;
-        totalLabel.Text = $"${total:F}";
+        totalLabel.Text = $"${total:F2}";
 
     }
 }
