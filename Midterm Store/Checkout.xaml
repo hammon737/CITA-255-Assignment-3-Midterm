@@ -42,7 +42,7 @@
             <Label
                  Grid.Row="2"
                  x:Name="totalLabel"
-                 Text="$0.00"
+                 Text=""
                  FontSize="15"
                  FontAttributes="Italic"
                  VerticalOptions="End" 
