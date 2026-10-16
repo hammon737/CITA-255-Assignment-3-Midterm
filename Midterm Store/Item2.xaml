@@ -11,15 +11,10 @@
             <Image Source="lovepotion.png" Grid.Row="0" HeightRequest="160"/>
             <Label Grid.Row="1" Grid.ColumnSpan="3"
                 Text="Love Potion"
-                FontSize="20"
-                VerticalOptions="Center" 
-                HorizontalOptions="Start" />
+                Style="{StaticResource titles}"/>
             <Label Grid.Row="2" Grid.ColumnSpan="3"
                 Text="$25.99"
-                TextColor="IndianRed"
-                FontSize="18"
-                VerticalOptions="Center" 
-                HorizontalOptions="Start" />
+                Style="{StaticResource prices}"/>
             <Label Grid.Row="3" Grid.ColumnSpan="3"
                 Text="This is a love potion. Use with caution. Potionsellers Inc is not liable for any 'crimes of passion' this may cause."
                 VerticalOptions="Center" 

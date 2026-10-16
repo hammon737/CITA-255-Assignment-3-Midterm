@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Midterm_Store.NewPage5"
              Title="Checkout">
-    <VerticalStackLayout>
+    <ScrollView>
         <Grid RowDefinitions ="Auto,*,Auto,Auto,Auto"
               Padding="40"
               RowSpacing="16">
@@ -15,30 +15,30 @@
                 VerticalOptions="Center" 
                 HorizontalOptions="Start" />
             <Border Grid.Row="1"
-                    StrokeThickness="1"
-                    Padding="4">
-                    <CollectionView x:Name="CartView">
-                        
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Label Text="{Binding .}"
-                                       FontSize="15"
-                                       Padding="12,10" />
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
+                        StrokeThickness="1"
+                        Padding="4">
+                <CollectionView x:Name="CartView">
 
-                        <CollectionView.EmptyView>
-                            <Label x:Name="empty"
-                                Grid.Row="1" Grid.ColumnSpan="3"
-                                Text="Nothing in here yet."
-                                FontSize="15"
-                                TextColor="Grey"
-                                VerticalOptions="Center" 
-                                HorizontalOptions="Start" />
-                        </CollectionView.EmptyView>
-                    </CollectionView>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding .}"
+                                           FontSize="15"
+                                           Padding="12,10" />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                    <CollectionView.EmptyView>
+                        <Label x:Name="empty"
+                                    Grid.Row="1" Grid.ColumnSpan="3"
+                                    Text="Nothing in here yet."
+                                    FontSize="15"
+                                    TextColor="Grey"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start" />
+                    </CollectionView.EmptyView>
+                </CollectionView>
             </Border>
-            
+
             <Label
                  Grid.Row="2"
                  x:Name="totalLabel"
@@ -67,5 +67,5 @@
         </Grid>
         
              
-    </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

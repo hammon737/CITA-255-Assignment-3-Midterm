@@ -11,15 +11,10 @@
             <Image Source="senseenhancementpotion.png" Grid.Row="0" HeightRequest="160"/>
             <Label Grid.Row="1" Grid.ColumnSpan="3"
                 Text="Sensory Enhancement Potion"
-                FontSize="20"
-                VerticalOptions="Center" 
-                HorizontalOptions="Start" />
+                Style="{StaticResource titles}"/>
             <Label Grid.Row="2" Grid.ColumnSpan="3"
                 Text="$12.45"
-                TextColor="IndianRed"
-                FontSize="18"
-                VerticalOptions="Center" 
-                HorizontalOptions="Start" />
+                Style="{StaticResource prices}"/>
             <Label Grid.Row="3" Grid.ColumnSpan="3"
                 Text="This potion increases the user's senses. Users can hear a pin drop from a mile away."
                 VerticalOptions="Center" 

@@ -16,8 +16,7 @@
                 Text="Buy our potions!"
                 FontSize="30"
                 HorizontalTextAlignment="Start"
-                Padding="10"
-                FontAttributes="Bold"/>
+                Padding="10"/>
             <CollectionView x:Name="productList" 
                 SelectionMode="Single"
                 SelectionChanged="OnProductSelected">
@@ -25,7 +24,7 @@
                     <DataTemplate>
                         <Label Text="{Binding .}" 
                                Padding="10"
-                               FontSize="20" 
+                               FontSize="20"
                                HorizontalTextAlignment="Start" />
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

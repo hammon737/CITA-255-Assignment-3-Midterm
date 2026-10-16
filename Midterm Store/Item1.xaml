@@ -14,15 +14,10 @@
             <Image Source="healthpotion.png" Grid.Row="0" HeightRequest="160"/>
             <Label Grid.Row="1" Grid.ColumnSpan="3"
                 Text="Health Potion"
-                FontSize="20"
-                VerticalOptions="Center" 
-                HorizontalOptions="Start" />
+                Style="{StaticResource titles}"/>
             <Label Grid.Row="2" Grid.ColumnSpan="3"
                 Text="$15.25"
-                TextColor="IndianRed"
-                FontSize="18"
-                VerticalOptions="Center" 
-                HorizontalOptions="Start" />
+                Style="{StaticResource prices}"/>
             <Label Grid.Row="3" Grid.ColumnSpan="3"
                 Text="This potion will heal any physical injuries."
                 VerticalOptions="Center" 
