@@ -4,7 +4,7 @@
              x:Class="Midterm_Store.NewPage5"
              Title="Checkout">
     <VerticalStackLayout>
-        <Grid RowDefinitions ="Auto,*,Auto,Auto"
+        <Grid RowDefinitions ="Auto,*,Auto,Auto,Auto"
               Padding="40"
               RowSpacing="16">
             <Label 
@@ -55,7 +55,14 @@
                 VerticalOptions="End"
                 Margin="20"
                 Clicked="checkingOut"/>
-            
+            <Label
+                Grid.Row="4"
+                x:Name="purchaseLabel"
+                Text=""
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                TextColor="MediumSeaGreen"/>
+
 
         </Grid>
         

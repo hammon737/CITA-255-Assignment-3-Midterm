@@ -10,6 +10,7 @@
             Routing.RegisterRoute("GoTo3", typeof(NewPage3));
             Routing.RegisterRoute("GoTo4", typeof(NewPage4));
             Routing.RegisterRoute("GoToCheckout", typeof(NewPage5));
+            Routing.RegisterRoute("itemPage", typeof(ProductDetail));
 
         }
     }

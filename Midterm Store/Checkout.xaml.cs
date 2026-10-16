@@ -21,6 +21,7 @@ public partial class NewPage5 : ContentPage
         Cart.Quantity.Clear();
         Cart.Price.Clear();
         Refresh();
+        purchaseLabel.Text = "Thank you for your purchase!";
     }
 
     void Refresh()
@@ -39,6 +40,7 @@ public partial class NewPage5 : ContentPage
         CartView.ItemsSource = null;
         CartView.ItemsSource = lines;
         totalLabel.Text = $"${total:F2}";
+        purchaseLabel.Text = " ";
 
     }
 }

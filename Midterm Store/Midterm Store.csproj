@@ -92,6 +92,9 @@
 	  <Compile Update="Item4.xaml.cs">
 	    <DependentUpon>Item4.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="ProductDetail.xaml.cs">
+	    <DependentUpon>ProductDetail.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -114,6 +117,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Checkout.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ProductDetail.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
