@@ -9,13 +9,22 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <Color x:Key="InStock">DarkSeaGreen</Color>
+            <Color x:Key="OutStock">DimGrey</Color>
             <Style TargetType="Button">
                 <Setter Property="FontSize" Value="20"/>
                 <Setter Property="TextColor" Value="Purple"/>
                 <Setter Property="BackgroundColor" Value="Lavender"/>
             </Style>
+            <Style TargetType="Button" x:Key="nonfunctional">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="Gray"/>
+                <Setter Property="BackgroundColor" Value="Black"/>
+            </Style>
             <Style TargetType="Label">
                 <Setter Property="FontSize" Value="15"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Start"/> 
             </Style>
             <Style TargetType="Label" x:Key="titles">
                 <Setter Property="FontSize" Value="20"/>

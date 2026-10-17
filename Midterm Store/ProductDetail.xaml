@@ -4,16 +4,51 @@
              x:Class="Midterm_Store.ProductDetail"
              Title="ProductDetail">
     <VerticalStackLayout Padding="24" Spacing="12">
-
-        <Label x:Name="NameLabel"
-           Text="(name)"
-           FontSize="30"
-           FontAttributes="Bold" />
-
-        <Label x:Name="PriceLabel"
-           Text="(price)"
-           FontSize="22"
-           TextColor="Gray" />
+        <ScrollView>
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                ColumnDefinitions="*"
+                RowSpacing="5"
+                Margin="10">
+                <Image x:Name="PotionImage" Source=" " Grid.Row="0" HeightRequest="160"/>
+                <Label Grid.Row="1"
+                    x:Name="TitleLabel" 
+                    Text=" " 
+                    Style="{StaticResource titles}"/>
+                <Label Grid.Row="2"
+                    x:Name="PriceLabel" 
+                    Text=" "
+                    Style="{StaticResource prices}"/>
+                <Label Grid.Row="3"
+                    x:Name="Descrip1" 
+                    Text=" "/>
+                <Label Grid.Row="4"
+                    x:Name="Descrip2" 
+                    Text=" "/>
+                <Label Grid.Row="5"
+                    x:Name="IsStock" 
+                    Text=" "/>
+                <Label Grid.Row="6" Grid.ColumnSpan="3"
+                       Text="Quantity"
+                       FontAttributes="Bold"/>
+                <Entry Grid.Row="7"
+                       x:Name="orderEntry"
+                       Text=""
+                       Placeholder="How many?"
+                       Keyboard="Numeric"
+                       FontSize="18" />
+                <Button Grid.Row="8"
+                       x:Name="FirstBack"
+                       Text="Add to Cart" 
+                       Clicked="Ordered"
+                       HorizontalOptions="Fill" 
+                       
+                        />
+                <Label Grid.Row="9"
+                       Text="No Number Collected Yet" 
+                       HorizontalTextAlignment="Start" 
+                       x:Name="resultLabel"/>
+            </Grid>
+        </ScrollView>
 
     </VerticalStackLayout>
 </ContentPage>

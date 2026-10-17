@@ -3,54 +3,31 @@ namespace Midterm_Store
 {
     public partial class MainPage : ContentPage
     {
-
+        List<string> rows = new List<string>();
         public MainPage()
         {
             InitializeComponent();
-            productList.ItemsSource = products;
+            
+            for (int i = 0; i < Details.ProductTitle.Length; i++)
+            {
+                rows.Add($"{Details.ProductTitle[i]}");
+            }
+            productList.ItemsSource = rows;
         }
 
-        List<string> products =
-        [
-            "Health Potion",
-            "Love Potion",
-            "Gravity Potion",
-            "Sensory Enhancement Potion"
-        ];
-
-        List<double> prices =
-        [
-            15.25,
-            25.99,
-            13.99,
-            12.45
-        ];
+        
 
         private async void OnProductSelected(object sender, SelectionChangedEventArgs e)
         {
-            if (e.CurrentSelection.Count > 0)
-            {
-                string picked = e.CurrentSelection[0].ToString();
+            if (e.CurrentSelection.Count == 0)
+                return;
 
-                productList.SelectedItem = null;
+            string picked = e.CurrentSelection[0].ToString();
 
-                if (picked == "Health Potion")
-                {
-                    await Shell.Current.GoToAsync("GoTo1");
-                }
-                if (picked == "Love Potion")
-                {
-                    await Shell.Current.GoToAsync("GoTo2");
-                }
-                if (picked == "Gravity Potion")
-                {
-                    await Shell.Current.GoToAsync("GoTo3");
-                }
-                if (picked == "Sensory Enhancement Potion")
-                {
-                    await Shell.Current.GoToAsync("GoTo4");
-                }
-            }
+            productList.SelectedItem = null;
+
+            int index = rows.IndexOf(picked);
+            await Shell.Current.GoToAsync($"item?index={index}");
         }
         
     }
