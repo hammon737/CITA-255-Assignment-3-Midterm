@@ -22,14 +22,26 @@ public partial class ProductDetail : ContentPage
             index = int.Parse(value);
             PotionImage.Source = Details.ProductImage[index];
             TitleLabel.Text = Details.ProductTitle[index];
-            PriceLabel.Text = Details.Prices[index].ToString();
+            PriceLabel.Text = ($"${Details.Prices[index].ToString()}");
             Descrip1.Text = Details.Description1[index];
             Descrip2.Text = Details.Description2[index];
-            IsStock.Text = Details.Stock[index];
-            if (IsStock.Text == "Out of Stock") 
+            if (index == 1)
             {
-                FirstBack.IsEnabled = false;
-                
+                outofstocklabel.IsVisible = true;
+                IStock.IsVisible = false;
+                OStock.IsVisible = true;
+                Quan.IsVisible = false;
+                orderEntry.IsVisible = false;
+                FirstBack.IsVisible = false;
+            }
+            else 
+            {
+                outofstocklabel.IsVisible = false;
+                IStock.IsVisible = true;
+                OStock.IsVisible = false;
+                Quan.IsVisible = true;
+                orderEntry.IsVisible = true;
+                FirstBack.IsVisible = true;
             }
         }
     }

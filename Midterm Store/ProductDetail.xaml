@@ -8,26 +8,37 @@
             <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
                 ColumnDefinitions="*"
                 RowSpacing="5"
-                Margin="10">
-                <Image x:Name="PotionImage" Source=" " Grid.Row="0" HeightRequest="160"/>
+                Margin="15">
+                <Image x:Name="PotionImage" Source=" " Grid.Row="0" HeightRequest="130"/>
                 <Label Grid.Row="1"
-                    x:Name="TitleLabel" 
-                    Text=" " 
-                    Style="{StaticResource titles}"/>
+                       x:Name="TitleLabel" 
+                       Text=" " 
+                       Style="{StaticResource titles}"/>
                 <Label Grid.Row="2"
-                    x:Name="PriceLabel" 
-                    Text=" "
-                    Style="{StaticResource prices}"/>
+                       x:Name="PriceLabel" 
+                       Text=" "
+                       Style="{StaticResource prices}"/>
                 <Label Grid.Row="3"
-                    x:Name="Descrip1" 
-                    Text=" "/>
+                       x:Name="Descrip1" 
+                       Text=" "/>
                 <Label Grid.Row="4"
-                    x:Name="Descrip2" 
-                    Text=" "/>
+                       x:Name="Descrip2" 
+                       Text=" "/>
                 <Label Grid.Row="5"
-                    x:Name="IsStock" 
-                    Text=" "/>
-                <Label Grid.Row="6" Grid.ColumnSpan="3"
+                       x:Name="IStock" 
+                       Text="In Stock"
+                       TextColor="{StaticResource InStock}"/>
+                <Label Grid.Row="5"
+                       x:Name="OStock" 
+                       Text="Out of Stock"
+                       TextColor="{StaticResource OutStock}"/>
+                <Label Grid.Row="7"
+                       x:Name="outofstocklabel"
+                       Text="Sorry, this product is currently out of Stock"
+                       TextColor="{StaticResource OutStock}"
+                       HorizontalOptions="Center"/>
+                <Label Grid.Row="6"
+                       x:Name="Quan"
                        Text="Quantity"
                        FontAttributes="Bold"/>
                 <Entry Grid.Row="7"
@@ -40,11 +51,9 @@
                        x:Name="FirstBack"
                        Text="Add to Cart" 
                        Clicked="Ordered"
-                       HorizontalOptions="Fill" 
-                       
-                        />
+                       HorizontalOptions="Fill" />
                 <Label Grid.Row="9"
-                       Text="No Number Collected Yet" 
+                       Text=" "
                        HorizontalTextAlignment="Start" 
                        x:Name="resultLabel"/>
             </Grid>

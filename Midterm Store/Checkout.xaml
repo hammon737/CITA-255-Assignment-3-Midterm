@@ -10,10 +10,7 @@
             <Label 
                 Grid.Row="0" Grid.ColumnSpan="3"
                 Text="Your Basket:"
-                FontSize="20"
-                FontAttributes="Bold"
-                VerticalOptions="Center" 
-                HorizontalOptions="Start" />
+                Style="{StaticResource titles}"/>
             <Border Grid.Row="1"
                         StrokeThickness="1"
                         Padding="4">
@@ -22,8 +19,8 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Label Text="{Binding .}"
-                                           FontSize="15"
-                                           Padding="12,10" />
+                                           Padding="12,10" 
+                                           Style="{StaticResource Lists}"/>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
 
@@ -33,7 +30,7 @@
                                     Text="Nothing in here yet."
                                     FontSize="15"
                                     TextColor="Grey"
-                                    VerticalOptions="Center" 
+                                    VerticalOptions="Start" 
                                     HorizontalOptions="Start" />
                     </CollectionView.EmptyView>
                 </CollectionView>
