@@ -56,7 +56,7 @@
                 Grid.Row="4"
                 x:Name="purchaseLabel"
                 Text=""
-                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
                 FontSize="20"
                 TextColor="MediumSeaGreen"/>
 
