@@ -20,7 +20,9 @@
                         <DataTemplate>
                             <Label Text="{Binding .}"
                                            Padding="12,10" 
-                                           Style="{StaticResource Lists}"/>
+                                           VerticalOptions="Start" 
+                                           HorizontalOptions="Start"
+                                   />
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
 
